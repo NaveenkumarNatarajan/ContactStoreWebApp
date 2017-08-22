@@ -1,0 +1,23 @@
+apply plugin: 'war'
+apply plugin: 'jetty'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'maven'    
+apply plugin: 'java'
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+}
+
+version = '1.0'
+
+jettyRun.contextPath = 'ContactStoreWebApp'
+jettyRun.httpPort=9090
+jettyRun.reload="automatic"
+jettyRun.scanIntervalSeconds=5
+war.archiveName="ContactStoreWebApp.war"

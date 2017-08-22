@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Contact Store</title>
+<script src="js/lib/jquery.js"></script>
+<script src="js/lib/bootstrap.js"></script>
+<script src="js/lib/custom.js"></script>
+<script src="js/lib/datatables.min.js"></script>
+<script src="js/lib/dataTables.alphabetSearch.min.js"></script>
+<script src="js/lib/angular.js"></script>
+<script src="js/lib/ngProgress.js"></script>
+<script src="js/lib/toaster.min.js"></script>
+<script src="js/lib/angular-route.js"></script>
+<script src="js/lib/angularjs-dropdown-multiselect.js"></script>
+<script src="js/lib/angular-cookies.js"></script>
+<script src="js/contact-store-app.js"></script>
+<script src="js/contact-store-signIn-mod.js"></script>
+<script src="js/contact-store-signIn-dir.js"></script>
+<script src="js/contact-store-dashboard-mod.js"></script>
+<script src="js/contact-store-signUp-mod.js"></script>
+<script src="js/contact-store-signUp-dir.js"></script>
+<script src="js/contact-store-service.js"></script>
+<script src="js/contact-store-addContact-mod.js"></script>
+<script src="js/contact-store-deleteContact-mod.js"></script>
+
+<link type="text/css" rel="stylesheet" href="css/lib/bootstrap.css"></link>
+<link type="text/css" rel="stylesheet" href="css/lib/toaster.min.css"></link>
+<link type="text/css" rel="stylesheet" href="css/lib/ngProgress.css"></link>
+<link type="text/css" rel="stylesheet" href="css/common-style.css"></link>
+<link rel="icon" href="resources/images/contact-store-icon-glxy.png">
+</head>
+<body ng-app="contactStoreApp">
+	<div class="container">
+		<tws-toaster></tws-toaster>
+			<div ng-view="#"></div>
+	</div>
+</body>
+</html>
