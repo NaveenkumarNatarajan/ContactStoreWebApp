@@ -33,9 +33,9 @@
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
-                  <li><a ng-click="dataView()"><i class="fa fa-home fa-fw" aria-hidden="true" class="menu-font-style"></i>Home</a></li>
-                  <li><a ng-click="addNewContact()"><i class="fa fa-plus fa-fw" aria-hidden="true" class="menu-font-style"></i>Add New</a></li>
-                  <li><a ng-click="deleteContact()"><i class="fa fa-trash-o fa-fw" aria-hidden="true" class="menu-font-style"></i>Delete</a></li>
+                  <li><a ng-click="dataView()"><i class="fa fa-home fa-fw" aria-hidden="true" style="font-size:13px;"></i>Home</a></li>
+                  <li><a ng-click="addNewContact()"><i class="fa fa-plus fa-fw" aria-hidden="true" style="font-size:13px;"></i>Add New</a></li>
+                  <li><a ng-click="deleteContact()"><i class="fa fa-trash-o fa-fw" aria-hidden="true" style="font-size:13px;"></i>Delete</a></li>
                   </li>
                 </ul>
               </div>
@@ -46,17 +46,11 @@
           <div class="nav_menu">
           <ul class="nav navbar-nav navbar-right">
            	 	<li ng-click="logout()"><a href="#" "><i title="Log out" class="fa fa-power-off "aria-hidden="true" 
-           	 		style="font-size:20px;align:center"></i></a>
-           	 	</li>
-                <li class="li-cursor-hand"><a ng-click="addNewContact()">Add New
-                	<i class="fa fa-plus fa-fw" aria-hidden="true" class="menu-font-style"></i></a>
-                </li>
-                <li class="li-cursor-hand"><a ng-click="deleteContact()">Delete
-                	<i class="fa fa-trash-o fa-fw" aria-hidden="true" class="menu-font-style"></i></a>
-                </li>
-                <li class="li-cursor-hand"><a ng-click="dataView()">Home
-                	<i class="fa fa-home fa-fw" aria-hidden="true" class="menu-font-style"></i></a>
-                </li>
+           	 		style="font-size:20px;align:center"></i></a></li>
+                <!-- <li><a  ng-click="()">Settings<i class="fa fa-gear fa-fw" aria-hidden="true" style="font-size:13px;"></i></a></li> -->
+                <li><a ng-click="addNewContact()">Add New<i class="fa fa-plus fa-fw" aria-hidden="true" style="font-size:13px;"></i></a></li>
+                <li><a ng-click="deleteContact()">Delete<i class="fa fa-trash-o fa-fw" aria-hidden="true" style="font-size:13px;"></i></a></li>
+                <li><a ng-click="dataView()">Home<i class="fa fa-home fa-fw" aria-hidden="true" style="font-size:13px;"></i></a></li>
               </ul>
             </nav>
           </div>

@@ -4,8 +4,8 @@
  * @version 1.0
  */
 
-angular.module("contact-service.module", ["ngCookies"])
-	.service("contactService", ["$http", "ConfigProvider", "$cookies", function contactService($http, ConfigProvider, $cookies) {
+angular.module("contact-service.module",[])
+	.service("contactService", ["$http", "ConfigProvider", function contactService($http, ConfigProvider) {
 		
 		this.authenticateUser = function(userName, password, callback) {
 			url = ConfigProvider.userAuthenticationAPI;
@@ -19,7 +19,7 @@ angular.module("contact-service.module", ["ngCookies"])
 				  callback(response.data);
 			});
 		}
-		this.register = function(params, callback) {
+		this.register = function(params, callback){
 			url = ConfigProvider.userRegistrationAPI;
 			var httpReq = $http({
 				method : "POST",
@@ -54,7 +54,7 @@ angular.module("contact-service.module", ["ngCookies"])
 				callback(response.data);
 			});
 		}
-		this.deleteContact =  function(selectedContact, user, callback) {
+		this.deleteContact =  function(selectedContact, user, callback){
 			var contactIds = [];
 			selectedContact.forEach(function(contact){
 				contactIds.push(contact.contactId);

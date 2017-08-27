@@ -34,4 +34,3 @@ angular.module("login.module",["toaster", "ngProgress", "login.directive", "ngRo
 
 }])
 
-

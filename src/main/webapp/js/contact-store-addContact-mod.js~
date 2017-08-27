@@ -11,10 +11,7 @@ angular.module("addContact.module",["toaster", "ngProgress", "contact-service.mo
 	$scope.firstName = ""; $scope.lastName = "";
     $scope.email = ""; $scope.phone = "";
     $scope.streetAddress = "", $scope.notes = "";
-    
-    if($scope.userName == undefined || $scope.userName == "") {
-		$location.path("/login"); //Redirect to login if user is not logged.
-	} 
+    console.log('In Add Contact Controller');
     
     $scope.addContact = function(values){
         if($scope.firstName != undefined && $scope.firstName !='' && 
@@ -44,3 +41,4 @@ angular.module("addContact.module",["toaster", "ngProgress", "contact-service.mo
     	return payload;
     }
 }])
+

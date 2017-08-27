@@ -4,19 +4,28 @@
  * @version 1.0
  */
 
-angular.module("deleteContact.module",["toaster", "ngProgress", "contact-service.module"])
+angular.module("deleteContact.module", ["toaster", "ngProgress", "contact-service.module"])
 
-    .controller("deleteContactCtrl",["$scope", "contactService", "$cookies", "toaster", function($scope, contactService, $cookies, toaster) {
+    .controller("deleteContactCtrl", ["$scope", "contactService", "$cookies", "toaster", function($scope, contactService, $cookies, toaster) {
     	$scope.userName = $cookies.get("userLogged");
-    	$scope.searchSelectAllSettings = { enableSearch: true, showSelectAll: true, keyboardControls: true,
-    									   displayProp:'fullName',idProp:'contactId' };
-    	$scope.searchSelectAllModel = [];
-        $scope.example14settings = {
-            scrollableHeight: '200px',
-            scrollable: true,
-            enableSearch: true
-        };
-
+    	
+    	if($scope.userName == undefined || $scope.userName == "") {
+    		$location.path("/login"); //Redirect to login if user is not logged.
+    	}else{
+	    	$scope.searchSelectAllSettings = { 
+	    		enableSearch: true, 
+	    		showSelectAll: true, 
+	    		keyboardControls: true,
+	    		displayProp:'fullName',
+	    		idProp:'contactId' 
+	    	};
+	    	$scope.searchSelectAllModel = [];
+	        $scope.example14settings = {
+	            scrollableHeight: '200px',
+	            scrollable: true,
+	            enableSearch: true
+	        };
+    	}
         $scope.searchSelectAllData = [];
     	angular.element(document).ready(function(){
     		contactService.getContact($scope.userName, function(response){
