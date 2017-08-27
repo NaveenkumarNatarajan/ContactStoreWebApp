@@ -1,2 +1,2 @@
 # ContactStoreWebApp
-Web Application aims serve as Contact Directory and options to manage contact
+Web Application aims to serve as Contact Directory and options to manage contact
